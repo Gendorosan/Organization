@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country roads took you home</title>
+    <style>
+   .design {
+    display: inline-block; /* Строчно-блочный элемент */
+    padding: 5px 20px; /* Добавляем поля */
+    text-decoration: none; /* Убираем подчёркивание у ссылки */
+    /* Градиент */
+    background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#deefff), color-stop(100%,#98bede));
+    background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: -o-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: -ms-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: linear-gradient(top, #deefff 0%,#98bede 100%);
+    border-radius: 10px; /* Скругляем уголки */
+    border: 1px solid #008; /* Добавляем синюю рамку */
+    font: 12px/1 Arial, sans-serif; /* Рубленый шрифт */
+    color: #2c539e; /* Цвет текста и ссылки */
+   }
+  </style>
+        <script>
+        function check()
+        {
+            var login = document.getElementById('login');
+            var password = document.getElementById('password');
+            if(login.value=="")
+            {
+                alert("Введите логин");
+                return false;
+            }
+            if(password.value=="")
+            {
+                alert("Введите пароль");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">Country roads took you home_page</h1>
+    <form method="post" onsubmit="return check();">
+        <p align="center">Логин</p>
+        <p align="center"><input name="login" id="login"></p>
+        <p align="center">Пароль</p>
+        <p align="center"><input type="password" name="password" id="password"></p>
+        <p align="center"><input class="design" type="submit" value="Вход"></p>
+        <p align="center"><a  href="/Registration" class="design">Регистрация</a></p>
+    </form>
+</body>
+</html>

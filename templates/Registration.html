@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+   .design {
+    display: inline-block; /* Строчно-блочный элемент */
+    padding: 5px 20px; /* Добавляем поля */
+    text-decoration: none; /* Убираем подчёркивание у ссылки */
+    /* Градиент */
+    background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#deefff), color-stop(100%,#98bede));
+    background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: -o-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: -ms-linear-gradient(top, #deefff 0%,#98bede 100%);
+    background: linear-gradient(top, #deefff 0%,#98bede 100%);
+    border-radius: 10px; /* Скругляем уголки */
+    border: 1px solid #008; /* Добавляем синюю рамку */
+    font: 12px/1 Arial, sans-serif; /* Рубленый шрифт */
+    color: #2c539e; /* Цвет текста и ссылки */
+   }
+  </style>
+    <script>
+        function check()
+        {
+            var surname = document.getElementById('surname');
+            var name = document.getElementById('name');
+            var lastname = document.getElementById('lastname');
+            var position_manager = document.getElementById('position_manager');
+            var position_worker = document.getElementById('position_worker');
+            var login = document.getElementById('login');
+            var password = document.getElementById('password');
+
+            if(surname.value=="")
+            {
+                alert("Введите фамилию");
+                return false;
+            }
+            if(name.value=="")
+            {
+                alert("Введите имя");
+                return false;
+            }
+            if((position_manager.value=="")&&(position_worker.value==""))
+            {
+                alert("Выберите должность");
+                return false;
+            }
+            if(login.value=="")
+            {
+                alert("Введите логин");
+                return false;
+            }
+            if(password.value=="")
+            {
+                alert("Введите пароль");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" onsubmit="return check();">
+        <h1 align="center">Country roads took you to the registration_page</h1>
+        <p align="center">Фамилия</p>
+        <p align="center"><input name="surname" id="surname"></p>
+        <p align="center">Имя</p>
+        <p align="center"><input name="name" id="name"></p>
+        <p align="center">Отчество</p>
+        <p align="center"><input name="lastname" id="lastname"></p>
+        <p align="center">Должность</p>
+        <p align="center"><input type="radio" name="position_manager" id="position_manager"> Менеджер
+            <input type="radio" name="position_worker" id="position_worker"> Рабочий</p>
+        <p align="center">Логин</p>
+        <p align="center"><input name="login" id="login"></p>
+        <p align="center">Пароль</p>
+        <p align="center"><input type=password name="password" id="password"></p>
+        <p align="center"><input class="design" type="submit" value="Регистрация"></p>
+    </form>
+</body>
+</html>
